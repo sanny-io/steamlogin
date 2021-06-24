@@ -1,5 +1,5 @@
 {
-  "name": "steamlogin",
+  "name": "@sanny-io/steamlogin",
   "version": "1.0.0",
   "description": "Dead simple functions for logging in through Steam.",
   "main": "./lib/cjs/index.js",

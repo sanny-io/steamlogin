@@ -9,7 +9,7 @@ Dead simple functions for logging in through Steam. Works great with SPAs, serve
 
 ```jsx
 import React from 'react'
-import { getSteamLoginUrl } from 'steamlogin/client'
+import { getSteamLoginUrl } from '@sanny-io/steamlogin/client'
 
 const returnUrl = 'http://localhost:3000/auth'
 
@@ -22,7 +22,7 @@ export default function LoginButton() {
 
 ```jsx
 import React from 'react'
-import { doSteamLogin } from 'steamlogin/client'
+import { doSteamLogin } from '@sanny-io/steamlogin/client'
 
 const returnUrl = 'http://localhost:3000/auth'
 const handleClick = () => doSteamLogin(returnUrl)
@@ -39,7 +39,7 @@ If `returnUrl` is a server, you can simply skip to the server section.
 ```jsx
 import React, { useEffect } from 'react'
 import axios from 'axios'
-import { getSteamLoginResponse, getSteamIdFromResponse } from 'steamlogin/client'
+import { getSteamLoginResponse, getSteamIdFromResponse } from '@sanny-io/steamlogin/client'
 
 export default function AuthRoute() {
     const response = getSteamLoginResponse()
@@ -59,10 +59,10 @@ export default function AuthRoute() {
 
 ```typescript
 // If you're using ES modules.
-import steamlogin from 'steamlogin/server'
+import steamlogin from '@sanny-io/steamlogin/server'
 
 // If you're using CommonJS.
-const steamlogin = require('steamlogin/server')
+const steamlogin = require('@sanny-io/steamlogin/server')
 
 // Get the response through express, cloud functions, etc...
 // ...
