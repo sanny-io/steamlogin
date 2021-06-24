@@ -1,9 +1,14 @@
-# steamlogin
+# @sanny-io/steamlogin
 
 Dead simple functions for logging in through Steam. Works great with SPAs, server rendered pages, and cloud functions. No messing around with OpenID required.
 
-## Client
+## Installation
 
+```
+npm i @sanny-io/steamlogin
+```
+
+## Client
 
 ### Using an `href`
 
@@ -88,8 +93,6 @@ If `returnUrl` is a server (like express), this object can be accessed through y
 ID through `validateSteamLogin`.
 
 ```typescript
-// Example response
-
 {
     ['openid.assoc_handle']: "1234567890"
     ['openid.claimed_id']: "https://steamcommunity.com/openid/id/XXXXXXXXXXXXXX"
