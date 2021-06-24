@@ -19,7 +19,7 @@
   },
   "scripts": {
     "build": "rm -rf lib && tsc --project tsconfig.mjs.json && tsc --project tsconfig.cjs.json && node scripts/write-package-json.js",
-    "prepare": "pnpm run build"
+    "prepare": "npm run build"
   },
   "author": "sanny-io",
   "license": "MIT",
