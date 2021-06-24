@@ -1,0 +1,32 @@
+{
+  "name": "steamlogin",
+  "version": "1.0.0",
+  "description": "Dead simple functions for logging in through Steam.",
+  "main": "./lib/cjs/index.js",
+  "module": "./lib/mjs/index.js",
+  "exports": {
+    ".": {
+      "import": "./lib/mjs/index.js",
+      "require": "./lib/cjs/index.js"
+    },
+    "./client": {
+      "import": "./lib/mjs/client.js"
+    },
+    "./server": {
+      "import": "./lib/mjs/server.js",
+      "require": "./lib/cjs/server.js"
+    }
+  },
+  "scripts": {
+    "build": "rm -rf lib && tsc --project tsconfig.mjs.json && tsc --project tsconfig.cjs.json && node scripts/write-package-json.js",
+    "prepare": "pnpm run build"
+  },
+  "author": "sanny-io",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  }
+}
