@@ -2,6 +2,9 @@
   "name": "@sanny-io/steamlogin",
   "version": "1.0.1",
   "description": "Dead simple functions for logging in through Steam.",
+  "repository": "github:sanny-io/steamlogin",
+  "homepage": "https://github.com/sanny-io/steamlogin",
+  "bugs": "https://github.com/sanny-io/steamlogin/issues",
   "main": "./lib/cjs/index.js",
   "module": "./lib/mjs/index.js",
   "exports": {
