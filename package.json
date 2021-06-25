@@ -1,6 +1,6 @@
 {
   "name": "@sanny-io/steamlogin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Dead simple functions for logging in through Steam.",
   "repository": "github:sanny-io/steamlogin",
   "homepage": "https://github.com/sanny-io/steamlogin",
