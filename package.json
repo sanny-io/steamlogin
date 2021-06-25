@@ -5,6 +5,16 @@
   "repository": "github:sanny-io/steamlogin",
   "homepage": "https://github.com/sanny-io/steamlogin",
   "bugs": "https://github.com/sanny-io/steamlogin/issues",
+  "keywords": [
+    "steam",
+    "steamlogin",
+    "steamauth",
+    "auth",
+    "login",
+    "authentication",
+    "frontend",
+    "backend"
+  ],
   "main": "./lib/cjs/index.js",
   "module": "./lib/mjs/index.js",
   "exports": {
