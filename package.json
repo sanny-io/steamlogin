@@ -25,7 +25,7 @@
   },
   "scripts": {
     "build": "rm -rf lib && tsc && mv lib/index.js lib/index.mjs && tsc --module commonjs && mv lib/index.js lib/index.cjs",
-    "prepare": "pnpm run build"
+    "prepare": "npm run build"
   },
   "author": "sanny-io",
   "license": "MIT",
