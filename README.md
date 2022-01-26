@@ -14,7 +14,7 @@ npm i @sanny-io/steamlogin
 
 ```jsx
 import React from 'react'
-import { getSteamLoginUrl } from '@sanny-io/steamlogin/client'
+import { getSteamLoginUrl } from '@sanny-io/steamlogin'
 
 const returnUrl = 'http://localhost:3000/auth'
 
@@ -27,7 +27,7 @@ export default function LoginButton() {
 
 ```jsx
 import React from 'react'
-import { doSteamLogin } from '@sanny-io/steamlogin/client'
+import { doSteamLogin } from '@sanny-io/steamlogin'
 
 const returnUrl = 'http://localhost:3000/auth'
 const handleClick = () => doSteamLogin(returnUrl)
@@ -44,7 +44,7 @@ If `returnUrl` is a server, you can simply skip to the server section.
 ```jsx
 import React, { useEffect } from 'react'
 import axios from 'axios'
-import { getSteamLoginResponse, getSteamIdFromResponse } from '@sanny-io/steamlogin/client'
+import { getSteamLoginResponse, getSteamIdFromResponse } from '@sanny-io/steamlogin'
 
 export default function AuthRoute() {
     const response = getSteamLoginResponse()
@@ -64,10 +64,10 @@ export default function AuthRoute() {
 
 ```typescript
 // If you're using ES modules.
-import steamlogin from '@sanny-io/steamlogin/server'
+import steamlogin from '@sanny-io/steamlogin'
 
 // If you're using CommonJS.
-const steamlogin = require('@sanny-io/steamlogin/server')
+const steamlogin = require('@sanny-io/steamlogin')
 
 // Get the response through express, cloud functions, etc...
 // ...
@@ -81,13 +81,11 @@ steamlogin.validateSteamLogin(response)
 
 Please note that **a response can only ever be validated once.** Subsequent attempts will always fail.
 
-`getSteamLoginUrl` is shared between the server and client portions of this library, so you can use it on both SPAs and server rendered pages.
-
 ## `response`
 
 It's an object that Steam sends to the specified `returnUrl` through GET parameters after the user has logged in.
 
-If `returnUrl` is a client (like an SPA), `getSteamLoginResponse` creates this object for you. If you need to validate the login, you must send it to the server and call `validateSteamLogin` over there. Otherwise, you can immediately start using the 64-bit Steam ID of the user with `getSteamIdFromResponse`.
+If `returnUrl` is a client (like an SPA), `getSteamLoginResponse` creates this object for you. If you need to validate the login, you must send it to a server and call `validateSteamLogin` over there. Otherwise, you can immediately start using the 64-bit Steam ID of the user with `getSteamIdFromResponse`.
 
 If `returnUrl` is a server (like express), this object can be accessed through your server software's GET parameters. **You shouldn't directly use `getSteamIdFromResponse` on the server, as it doesn't perform any validation.** You should instead get the Steam
 ID through `validateSteamLogin`.

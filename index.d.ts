@@ -1,1 +1,1 @@
-export * from './lib/mjs/index'
+export * from './lib/index'
