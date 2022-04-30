@@ -8,6 +8,10 @@ Dead simple functions for logging in through Steam. Works great with SPAs, serve
 npm i @sanny-io/steamlogin
 ```
 
+## Example
+
+An example with server validation can be found in this repository's [`example`](example/README.md) folder.
+
 ## Client
 
 ### Using an `href`
