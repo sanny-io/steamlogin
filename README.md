@@ -10,7 +10,7 @@ npm i @sanny-io/steamlogin
 
 ## Example
 
-An example with server validation can be found in this repository's [`example`](example/README.md) folder.
+An example with server validation can be found in this repository's [`example`](example) folder.
 
 ## Client
 
