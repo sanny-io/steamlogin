@@ -4,3 +4,5 @@ scripts
 *.tgz
 tsconfig*
 pnpm-lock.yaml
+package-lock.json
+example
